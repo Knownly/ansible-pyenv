@@ -1,17 +1,4 @@
 ---
-- name: Install requirements
-  apt: pkg={{ item }} state=present
-  with_items:
-    - make
-    - build-essential
-    - libssl-dev
-    - zlib1g-dev
-    - libbz2-dev
-    - libreadline-dev
-    - libsqlite3-dev
-    - wget
-    - curl
-    - llvm
 
 - name: Install
   git: repo=https://github.com/yyuu/pyenv.git dest={{ pyenv_root }}
