@@ -1,6 +1,6 @@
 ---
 - include: debian/pyenv.yml
-  when: ansible_os_family == 'Debian'
+  when: ansible_os_family == 'Debian' or ansible_os_family == 'Ubuntu'
 
 - include: osx/pyenv.yml
   when: ansible_os_family == 'Darwin'
